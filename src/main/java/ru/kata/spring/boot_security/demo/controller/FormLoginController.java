@@ -25,6 +25,11 @@ public class FormLoginController {
         return "login";
     }
 
+    @GetMapping("/")
+    public String getBasePage() {
+        return "login";
+    }
+
     @GetMapping("/user")
     public String getUserPage(Principal principal, Model model) {
         User user = userService.findUserByUsername(principal.getName());
